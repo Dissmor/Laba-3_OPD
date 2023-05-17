@@ -1,5 +1,3 @@
-from distutils.log import debug
-from fileinput import filename
 from flask import *
 import search
 
@@ -22,7 +20,7 @@ def success():
     except:
         return render_template("run.html")
 
-@app.route("/run", methods=["POST"])
+@app.route("/success", methods=["POST"])
 def move_forward():
     return render_template("run.html")
 
