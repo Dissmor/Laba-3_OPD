@@ -3,7 +3,7 @@ import os
 def Search(fileName):
     i = 0
     iMax = 0
-    strRes = 'абыр валГ'
+    strRes = 'ьыъ'
     strWords = ''
     f = open(fileName, 'r')
     for line in f:
@@ -16,6 +16,6 @@ def Search(fileName):
             iMax = arrWords.count(strWord)
     for strWord in arrWords:
         if (arrWords.count(strWord) == iMax):
-            if (strRes > strWord):
+            if (strRes > strWord or strRes == 'ьыъ'):
                 strRes = strWord
     return  strRes
